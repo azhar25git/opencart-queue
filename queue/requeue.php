@@ -18,7 +18,10 @@ class Requeue {
     public function __construct()
     {
         $config = new \Config();
-        $config->load('queue');
+        $settings = require 'config.php';
+        foreach ($settings as $key => $setting){
+            $config->set($key, $setting);
+        }
 
         \Resque_Redis::prefix($config->get('redis_prefix'));
         \Resque::setBackend($config->get('redis_backend'), $config->get('redis_db'));
