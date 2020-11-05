@@ -1,0 +1,16 @@
+{
+    "name": "jimmyphong/queue",
+    "description": "OpenCart Resque",
+    "keywords": ["opencart", "ecommerce", "framework", "opensource", "queue", "requeue"],
+    "homepage": "https://github.com/duongkhoangiam",
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Jimmy Phong",
+            "email": "duongkhoangiam@gmail.com"
+        }
+    ],
+    "require": {
+        "resque/php-resque": "^1.3"
+    }
+}
