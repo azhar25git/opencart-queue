@@ -8,6 +8,9 @@
 namespace Queue;
 final class Registry
 {
+    /**
+     * @var array
+     */
     static private $store = array();
 
     /**

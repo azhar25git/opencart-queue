@@ -7,6 +7,9 @@
  */
 namespace Queue;
 class Events{
+    /**
+     * @throws \Exception
+     */
     public static function wakeup(){
         $db = Registry::get('db');
         if (!$db->connected()){
@@ -15,10 +18,16 @@ class Events{
         }
     }
 
+    /**
+     * @throws \Exception
+     */
     public static function beforePerform(){
         self::wakeup();
     }
 
+    /**
+     * @throws \Exception
+     */
     public static function afterPerform(){
         self::wakeup();
     }

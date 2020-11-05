@@ -28,7 +28,13 @@ class Requeue {
 
     }
 
-
+    /**
+     * @param string $queueName
+     * @param string $className
+     * @param array $args
+     * @param bool $trackStatus
+     * @return bool|string
+     */
     public function enqueue(string $queueName, string $className, array $args = [], bool $trackStatus = false)
     {
         return \Resque::enqueue($queueName, $className, $args, $trackStatus);
