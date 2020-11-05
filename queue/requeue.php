@@ -18,7 +18,7 @@ class Requeue {
     public function __construct()
     {
         $config = new \Config();
-        $settings = require 'config.php';
+        $settings = include dirname(__FILE__) . '/config.php';
         foreach ($settings as $key => $setting){
             $config->set($key, $setting);
         }

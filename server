@@ -17,8 +17,13 @@ $registry = new Queue\Registry();
 $config = new Config();
 $config->load('default');
 $config->load('catalog');
-$config->load('queue');
 $registry->set('config', $config);
+
+//Queue setting
+$settings = include DIR_SYSTEM . 'library/queue/config.php';
+foreach ($settings as $key => $value){
+    $config->set($key, $value);
+}
 
 // Log
 $log = new Log('queue.log');
